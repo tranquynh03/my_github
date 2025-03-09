@@ -1,0 +1,38 @@
+.box{
+    width: 560px;
+    height: 430px;
+    text-align: center;
+}
+h1{
+   font-family:'Roboto Stab', serif;
+   color: rgb(19, 151, 151);
+   background-color: rgb(66, 189, 189);
+   text-align: center;
+   padding: 10px;
+   border-radius: 5px;
+}
+.loi1{
+    list-style-type: disc;
+    color: rgb(66, 68, 189);
+    font-family: 'Roboto Stab', serif;
+    padding-left: 5px;
+    text-align: left;
+    transition: color 0.3s ease;
+}
+
+.loi1:hover{
+    color: rgb(228, 228, 19);
+}
+.quay-lai-btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: rgb(230, 204, 231);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; 
+    transition: background-color 0.3s ease;
+}
+.quay-lai-btn:hover {
+    background-color:#9c759f ;
+}
