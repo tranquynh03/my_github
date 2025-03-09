@@ -1,15 +1,37 @@
 .box{
     width: 560px;
-    height: 430px;
+    height: auto;
     text-align: center;
 }
 h1{
    font-family:'Roboto Stab', serif;
    color: rgb(19, 151, 151);
-   background-color: rgb(66, 189, 189);
    text-align: center;
    padding: 10px;
-   border-radius: 5px;
+   font-size: 18px;
+}
+h2{
+    font-family:'Roboto Stab', serif;
+    color:#ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0;
+    font-size: 12px;
+    text-align: left;
+    border: 2px;
+    background-color: rgb(66, 189, 189);
+}
+#first{
+    font-style: italic;
+}
+.second{
+    text-align: left;
+}
+img{
+    width:560px;
+    height: 430px;
+    object-fit:cover;
+    border-radius: 10px;
 }
 .loi1{
     list-style-type: disc;
