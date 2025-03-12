@@ -1,0 +1,106 @@
+
+.menu-ngang{
+    background-color:#333 ;
+    overflow-x:auto;
+    white-space: nowrap;
+}
+.menu-ngang ul{
+    list-style-type:none;
+    margin: 0;
+    padding:0;
+    display:flex;
+}
+.menu-ngang li{
+    padding: 10px 20px;
+    background-color: #333 ;
+    margin-right: 10px;
+}
+
+.menu-ngang a{
+    color: #fff;
+    text-decoration: none;
+}
+.menu-ngang ul li a:hover {
+    background-color: #0d0d0e;
+}
+.main{
+    display: flex;
+    height: auto;
+}
+.menu-doc{
+    max-height:600px;
+    overflow-y: auto;
+    background-color:#dde1e3 ;
+}
+.menu-doc ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.menu-doc li{
+    padding: 8px 15px;
+    background-color:#dde1e3;
+    padding: 5px;
+}
+.menu-doc a{
+    color: #333;
+    text-decoration: none;
+}
+.menu-doc ul li a:hover{
+    background-color: #827e8a;
+}
+.menu-doc li.active{
+    background-color: rgb(99, 202, 99);
+}
+.content{
+    padding: 20px;
+    border:1px solid#cadce4;
+    border-radius: 5px;
+}
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+button{
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.nut{
+    background-color: #53ca75;
+    color:#fff;
+}
+.second{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #a2e7b6;
+    border-radius: 10px;
+}
+.second #t1{
+    font-size: 16px;
+}
+.second #tt1{
+    font-weight: bold;
+    color:#fff;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #53ca75;
+    border-radius: 10px;
+    display: inline-block;
+}
+.quay-lai-btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: rgb(230, 204, 231);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; 
+    transition: background-color 0.3s ease;
+}
+.quay-lai-btn:hover {
+    background-color:#9c759f ;
+}

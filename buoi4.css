@@ -1,0 +1,23 @@
+.quay-lai-btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: rgb(230, 204, 231);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; 
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+.mau_nen{
+    display: inline-block;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: rgb(230, 204, 231);
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    text-decoration: none; 
+}
+.mau_nen:hover, .quay-lai-btn:hover{
+    background-color: #9c759f;
+}

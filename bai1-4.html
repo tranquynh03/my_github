@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="" content="">
+        <title>Buổi 4</title>
+        <link rel="stylesheet" href="bai1-4.css">
+    </head>
+    <body>
+        <header>
+            <nav class="menu-ngang">
+                <ul>
+                    <li><a href="#" onclick="showMenu('HTML Tutorial')">HTML</a></li>
+                    <li><a href="#" onclick="showMenu('CSS Tutorial')">CSS</a></li>
+                    <li><a href="#" onclick="showMenu('JAVASCRIPT Tutorial')">JAVASCRIPT</a></li>
+                    <li><a href="#" onclick="showMenu('SQL Tutorial')">SQL</a></li>
+                    <li><a href="#" onclick="showMenu('PYTHON Tutorial')">PYTHON</a></li>
+                    <li><a href="#" onclick="showMenu('JAVA Tutorial')">JAVA</a></li>
+                    <li><a href="#" onclick="showMenu('PHP Tutorial')">PHP</a></li>
+                    <li><a href="#" onclick="showMenu('HOW TO Tutorial')">HOW TO</a></li>
+                    <li><a href="#" onclick="showMenu('W3.CSS Tutorial')">W3.CSS</a></li>
+                    <li><a href="#" onclick="showMenu('C Tutorial')">C</a></li>
+                    <li><a href="#" onclick="showMenu('C++ Tutorial')">C++</a></li>
+                    <li><a href="#" onclick="showMenu('C# Tutorial')">C#</a></li>
+                    <li><a href="#" onclick="showMenu('BOOTSTRAP Tutorial')">BOOTSTRAP</a></li>
+                    <li><a href="#" onclick="showMenu('REACT Tutorial')">REACT</a></li>
+                    <li><a href="#" onclick="showMenu('MYSQL Tutorial')">MYSQL</a></li>
+                    <li><a href="#" onclick="showMenu('JQUERY Tutorial')">JQUERY</a></li>
+                    <li><a href="#" onclick="showMenu('EXCEL Tutorial')">EXCEL</a></li>
+                    <li><a href="#" onclick="showMenu('XML Tutorial')">XML</a></li>
+                    <li><a href="#" onclick="showMenu('DJANGO Tutorial')">DJANGO</a></li>
+                </ul>
+            </nav>
+        <div class="main">
+           <aside class="menu-doc" id="HTML Tutorial">
+            <ul>
+                <li><a href="#">HTML HOME</a></li>
+                <li><a href="#">HTML Editors</a></li>
+                <li><a href="#">HTML Basic</a></li>
+                <li><a href="#">HTML Elements</a></li>
+                <li><a href="#">HTML Attributes</a></li>
+                <li><a href="#">HTML Headings</a></li>
+                <li><a href="#">HTML Paragraphs</a></li>
+                <li><a href="#">HTML Styles</a></li>
+                <li><a href="#">HTML Formatting</a></li>
+                <li><a href="#">HTML Quotations</a></li>
+                <li><a href="#">HTML Comments</a></li>
+                <li><a href="#">HTML Color</a></li>
+                <li><a href="#">HTML CSS</a></li>
+                <li><a href="#">HTML Links</a></li>
+                <li><a href="#">HTML Images</a></li>
+                <li><a href="#">HTML Favicon</a></li>
+                <li><a href="#">HTML Page Title</a></li>
+                <li><a href="#">HTML Tables</a></li>
+                <li><a href="#">HTML Lists</a></li>
+                <li><a href="#">HTML Block & Inline</a></li>
+                <li><a href="#">HTML Div</a></li>
+                <li><a href="#">HTML Classes</a></li>
+                <li><a href="#">HTML Id</a></li>
+                <li><a href="#">HTML Iframes</a></li>
+            </ul>
+           </aside>
+          <section class="content" id="content-area">
+               <h1>HTML Tutorial</h1>
+               <div class="navigation">
+                <button class="nut">Home</button>
+                <button class="nut">NextNext</button>
+                </div>
+               <div class="second">
+                <h2>Learn HTML</h2>
+                <p class="t1">HTML is the standard markup language for Web pages.</p>
+                <p class="t1">With HTML you can create your own Website.</p>
+                <p class="t1">HTML is easy to learn - You will enjoy it!</p>
+                <p id="tt1">Start learning HTML now >></p>
+               </div>
+          </section>
+        </div>
+        <script>
+            function showMenu(menuName){
+                var menus = document.querySelectorAll('.menu-doc');
+                menus.forEach(function(menu) {
+           menu.style.display = 'none';
+       });
+       var activeMenu = document.getElementById(menuName);
+       if (activeMenu) {
+           activeMenu.style.display = 'block';
+       }
+   }
+   function showContent(contentName) {
+                var contentArea = document.getElementById('content-area');
+
+                if (contentName === 'htmlHome') {
+                    contentArea.innerHTML = `
+                        <h1>HTML Home</h1>
+                        <p>Welcome to the HTML tutorial. Here you will learn the basics of HTML.</p>
+                        <p>HTML stands for Hyper Text Markup Language. It is the standard language for creating web pages.</p>
+                        <p>Start learning HTML now and create your own webpage!</p>
+                    `;
+                }
+            }
+        </script>
+         <a href="buoi4.html" class="quay-lai-btn">Quay lại</a>
+    </body>
+</html>
