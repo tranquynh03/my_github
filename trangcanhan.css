@@ -5,7 +5,16 @@
 }
 body, html{
     height: 100%;
+    display:flex;
+    justify-content: center;
+}
+body{
+    width: 560px;
     text-align: center;
+    border:5px solid #99719c;
+    padding: 50px;
+    border-radius:12px;
+    margin:auto;
 }
 .content {
     padding: 20px;
@@ -13,10 +22,10 @@ body, html{
     text-align: center;
 }
 
-h1{
+.header{
    text-align: center;
    background-color: rgb(230, 204, 231);
-   padding: 2px 2px;
+   padding: 15px 20px;
    border-radius: 8px;
   
 }
