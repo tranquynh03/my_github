@@ -1,12 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body, html{
     height: 100%;
+    display:flex;
+    justify-content: center;
     text-align: center;
-    align-items: center;  
-    margin: 0;
+}
+body{
+    width: 560px;
+    height:auto;
+    text-align: center;
+    border:5px solid #99719c;
+    padding: 50px;
+    border-radius:12px;
+    margin:auto;
 }
 .content {
-    width: 100%;
-    height: 100%;
     display:flex;
     justify-content: center;
     flex-direction: column;
@@ -14,9 +26,10 @@ body, html{
 h1{
    text-align: center;
    background-color: rgb(230, 204, 231);
-   padding: 2px 2px;
-   border-radius: 8px;
-  
+   padding: 20px;
+   border-radius: 10px;
+   justify-content: center;
+   margin-bottom: 20px;
 }
 .mau_nen{
     display: inline-block;
