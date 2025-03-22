@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Đảm bảo các khung có chiều cao bằng nhau */
+    padding: 20px;
+    background-color: #f7f6f6;
+    color: rgb(5, 5, 5);
+}
+
+.header-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: stretch; 
+    gap: 20px; 
+}
+
+.text-section, .video-section {
+    flex: 1; /* Mỗi phần chiếm 50% chiều rộng của màn hình */
+    border-radius: 8px; /* Bo góc cho viền */
+    padding: 20px;
+    background-color: rgb(230, 208, 219); /* Màu nền cho các phần */
+    box-sizing: border-box; /* Đảm bảo padding không làm tăng kích thước phần tử */
+}
+
+.text-section h1 {
+    margin: 0;
+    font-size: 5em;
+}
+
+.nhat {
+    font-size: 1.2em;
+}
+
+.nhi{
+    font-size: 2em;
+    color:#f4f4f4;
+    border-radius: 50px;
+    background-color: rgb(216, 165, 222);
+    padding: 20px;
+    text-align: center;
+    width: 250px; /* Để chiều rộng tự động theo nội dung */
+    height: auto;
+    box-sizing: border-box;
+    position: relative;
+}
+.nhi:hover{
+    background-color: rgb(230, 180, 235);
+}
+.video-section {
+    text-align: center;
+}
+
+video {
+    width: 100%;
+    max-width: 100%; /* Giới hạn kích thước video */
+    height: auto;
+    border-radius: 8px; /* Thêm bo góc cho video */
+}
+/* Các nội dung sau header */
+.content{
+    padding: 20px;
+    background-color: #fff;
+    margin-top: 20px;
+}
+h2{
+    font-size: 3em;
+    color:rgb(5, 5, 5);
+    margin-bottom: 20px;
+}
+/* Tạo ngang*/
+.news-menu{
+    display: flex;
+    justify-content: space-between; /* Căn đều các phần tử trong menu */
+    gap: 10px; /* Khoảng cách giữa các phần tử */
+    flex-wrap: wrap;
+}
+.news-item {
+    text-align: center;
+    flex: 1 1 30%; /* Mỗi phần chiếm 1 phần 5 chiều rộng của khung */
+    max-width: 30%; /* Giới hạn chiều rộng tối đa của mỗi phần tử */
+    box-sizing: border-box;
+}
+
+.news-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px; /* Khoảng cách giữa hình ảnh và chữ */
+}
+
+.news-item p {
+    font-size: 1.2em;
+    color: #333;
+    margin: 0;
+}
+/*phần 3*/
+.new-section {
+    padding: 20px;
+    background-color: #fff;
+    margin-top: 20px;
+}
+.resource-item {
+    background-color: #fff; /* Màu nền cho mỗi khung */
+    padding: 20px;
+    margin-bottom: 15px; /* Khoảng cách giữa các mục */
+    border: 2px solid #ddd; /* Khung cho mỗi mục */
+    border-radius: 8px; /* Bo góc cho khung */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Thêm bóng đổ cho khung */
+}
+.resource-item h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.resource-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.left-column, .right-column {
+    flex: 1; 
+}
+
+.resource-item p {
+    padding: 20px;
+    margin-bottom: 15px; /* Khoảng cách giữa các mục */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.resource-item:hover, .news-item:hover{
+    background-color:rgb(240, 210, 235)
+}
+.quay-lai-btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: rgb(230, 204, 231);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; 
+    transition: background-color 0.3s ease;
+}
+.quay-lai-btn:hover {
+    background-color:#9c759f ;
+}

@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    max-width: 1200px; 
+    width: 100%; 
+    margin: 0 auto; 
+    padding: 20px; 
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+    height: 100vh; 
+    margin: 0;
+}
+
+.top-menu {
+    background-color: #0176FF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 10px 0;
+}
+.menu-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.top-menu ul {
+    list-style-type: none;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.top-menu li {
+    margin: 0 20px;
+}
+
+.top-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    display: block;
+}
+
+.top-menu a:hover {
+    background-color:#4CAF50;
+    border-radius: 4px;
+}
+
+
+.content {
+    width: calc(100% - 480px); 
+    margin-top: 20px;
+    margin-left: 240px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-right: 240px;
+    border: 2px solid #ccc; 
+    border-radius: 8px; 
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.article-list {
+    display: flex;
+    flex-direction: wrap;
+    
+    gap: 20px;
+}
+.article-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.article-content .article-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.dau {
+    margin-top: 10px;
+    font-size: 40px;
+    color: #333;
+    text-decoration: none;
+}
+.side-menu {
+    position: fixed;
+    top: 50px;
+    right: 0;
+    background-color: #f4f4f4;
+    width: 220px;
+    padding: 20px;
+    border-left: 1px solid #ccc;
+    height: calc(100% - 60px);
+    overflow-y: auto;
+    z-index: 0;
+}
+
+.side-menu ul {
+    list-style-type: none;
+}
+
+.side-menu li {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.side-menu a {
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.side-menu img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.side-menu h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.side-menu p {
+    font-size: 14px;
+    color: #666;
+}
+
+.side-menu a:hover {
+    background-color: #eee;
+}
+.menu-horizontal {
+    display: flex; /* Dùng flexbox để sắp xếp các mục theo chiều ngang */
+    justify-content: flex-start; /* Căn trái các mục trong menu ngang */
+    gap: 20px; /* Khoảng cách giữa các mục */
+    margin-top: 40px; /* Khoảng cách giữa menu ngang và danh sách bài viết */
+    overflow-x: auto; /* Cho phép cuộn ngang nếu không đủ chỗ */
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Căn giữa ảnh và tiêu đề */
+    width: 200px; /* Chiều rộng cố định cho mỗi mục menu */
+    text-align: center; /* Căn giữa chữ */
+}
+
+.menu-item a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    width: 100%; /* Đảm bảo mục chiếm toàn bộ chiều rộng */
+}
+
+.menu-item .menu-image {
+    width: 100%; /* Đảm bảo ảnh chiếm hết chiều rộng của mỗi mục */
+    height: 120px; /* Đặt chiều cao ảnh */
+    object-fit: cover; /* Đảm bảo ảnh không bị méo */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item h2 {
+    font-size: 16px;
+    margin-top: 10px; /* Khoảng cách giữa ảnh và tiêu đề */
+    line-height: 1.5;
+}
+
+.menu-item :hover, .article-content :hover, .side-menu :hover {
+    color: #4CAF50;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.quay-lai-btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: rgb(230, 204, 231);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; 
+    transition: background-color 0.3s ease;
+}
+.quay-lai-btn:hover {
+    background-color:#9c759f ;
+}

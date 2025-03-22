@@ -1,23 +1,148 @@
+/* Reset các thuộc tính mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Đặt cho body và html cấu trúc đầy đủ chiều cao và căn giữa */
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+}
+
+/* Container chứa nội dung và menu */
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Thanh menu bên trái */
+.sidebar {
+    width: 250px;
+    background-color: #99719c;
+    padding: 20px;
+    color: white;
+    height: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.sidebar .menu-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.sidebar .menu-list li {
+    margin-bottom: 15px;
+}
+
+.sidebar .menu-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar .menu-list li a:hover {
+    background-color: #6a4e7f;
+}
+
+/* Nội dung chính bên phải */
+.main-content {
+    flex-grow: 1; /* Làm cho phần nội dung chính chiếm không gian còn lại */
+    padding: 40px;
+    background-color: white;
+    border-radius: 12px;
+    margin-left: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #6a4e7f;
+}
+
+/* Phần nội dung với các liên kết */
+.content {
+    text-align: center;
+}
+
+.content a {
+    display: inline-block;
+    padding: 15px 30px;
+    margin: 15px;
+    background-color: rgb(230, 204, 231);
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #6a4e7f;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hiệu ứng hover cho các liên kết */
+.content a:hover {
+    background-color: #9c759f;
+    transform: scale(1.05);
+    color: white;
+}
+
+/* Nút Quay lại */
 .quay-lai-btn {
+    display: inline-block;
     padding: 10px 20px;
     font-size: 1.2em;
     background-color: rgb(230, 204, 231);
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    text-decoration: none; 
+    text-decoration: none;
     transition: background-color 0.3s ease;
-    margin-top: 20px;
+    margin-top: 30px;
 }
-.mau_nen{
-    display: inline-block;
-    padding: 20px;
-    margin-top: 20px;
-    background-color: rgb(230, 204, 231);
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-    text-decoration: none; 
-}
-.mau_nen:hover, .quay-lai-btn:hover{
+
+.quay-lai-btn:hover {
     background-color: #9c759f;
+    color: white;
+}
+
+/* Responsive: Điều chỉnh cho màn hình nhỏ */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .sidebar .menu-list li {
+        margin-bottom: 10px;
+    }
 }
