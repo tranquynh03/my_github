@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Bài 3</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="bai3-6.css">
+        </head>
+    <body>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div id="overlay-menu" class="overlay">
+            <div class="overlay-content">
+                <span class="close-btn" onclick="toggleMenu()">&times;</span>
+                <a href="#">Home</a>
+                <a href="#">Porfolio</a>
+                <a href="#">Team</a>
+                <a href="#">Blog</a>
+            </div>
+        </div>
+   
+
+        <div class="grid-container">
+            
+            <div class="grid-item tren1">
+                <div class="grid-overlay"><i class="fas fa-camera"></i></div>
+                <img src="https://file.hstatic.net/1000197303/file/xu-huong-thoi-trang-2023-7_51d24deea2184d11bf0cd22739e9fe62.jpg" alt="Ảnh 1">
+            </div>
+            <div class="grid-item tren2">
+                <div class="grid-overlay"><i class="fas fa-camera"></i></div>
+                <img src="https://www.deco-crystal.com/wp-content/uploads/2021/11/thiet-ke-shop-thoi-trang-nam.jpg" alt="Ảnh 2">
+                
+            </div>
+            <div class="grid-item tren3"> 
+                <div class="grid-overlay"><i class="fas fa-camera"></i></div>
+                <img src="https://noithatcaco.vn/uploads/baibao/thumb/uvnhwb1m.jpg" alt="Ảnh 3">
+               
+            </div>
+
+            <div class="grid-item duoi1"> 
+                <div class="grid-overlay"><i class="fas fa-camera"></i></div>
+                <img src="https://xuhuongthietke.com/media/14/den-ban-kinie-hinh-nam.jpg" alt="Ảnh 4">
+                
+            </div>
+            <div class="grid-item duoi2">
+                <div class="grid-overlay"><i class="fas fa-camera"></i></div>
+                <img src="https://file.hstatic.net/1000197303/file/xu-huong-thoi-trang-2023-6_85de0300c1664dccad20ce580f309cfc.jpg" alt="Ảnh 5">
+              
+            </div>
+            <div class="grid-item duoi3">
+                <div class="grid-overlay"><i class="fas fa-camera"></i></div>
+                <img src="https://sakurafashion.vn/upload/images_294/photo-5-15585905145021448956672.jpg" alt="Ảnh 6">
+               
+            </div>
+        </div>
+       
+        <script>
+            function toggleMenu() {
+                let overlay = document.getElementById("overlay-menu");
+                overlay.classList.toggle("show");
+            }
+        </script>
+        
+    <a href="buoi6.html" class="quay-lai-btn">Quay lại</a>
+    </body>
+</html>

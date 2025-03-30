@@ -1,0 +1,169 @@
+/* Định dạng thanh menu */
+.navbar {
+    position: absolute; /* Menu nằm trên ảnh nền, không cố định toàn trang */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: rgba(0, 0, 0, 0.5); /* Làm menu trong suốt một chút */
+    z-index: 10;
+}
+
+/* Ảnh nền */
+.fullscreen-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Vừa với chiều rộng màn hình */
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Menu chính */
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    position: relative;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+.menu ul li a:hover {
+    color: #c69c6d;
+}
+
+/* Biểu tượng */
+.icons {
+    display: flex;
+    gap: 15px;
+}
+
+.icons a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.icons a:hover {
+    color: #c69c6d;
+}
+
+/* Container hình ảnh */
+.img-container {
+    background-color: #ffffff;
+    color: #060606;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+    margin-top: 100vh; /* Đẩy xuống dưới ảnh nền */
+    border-radius: 10px;
+}
+
+.img-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.img1 {
+    text-align: center;
+    width: 22%;
+    margin: 5px 0;
+}
+
+.img2 {
+    position: relative;
+    width: 100%;
+    height: 250px; /* Giảm chiều cao ảnh sản phẩm */
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.img1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.lop1 {
+    opacity: 1;
+    z-index: 1;
+}
+
+.lop2 {
+    opacity: 0;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.img2:hover .lop1 {
+    opacity: 0;
+}
+
+.img2:hover .lop2 {
+    opacity: 1;
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Nút quay lại */
+.quay-lai-btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: rgb(230, 204, 231);
+    border: none;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.quay-lai-btn:hover {
+    background-color:#9c759f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .img1 {
+        width: 48%;
+    }
+}
+
+@media (max-width: 480px) {
+    .img1 {
+        width: 100%;
+    }
+}

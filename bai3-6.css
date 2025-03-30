@@ -1,0 +1,148 @@
+.menu-icon {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1000; /* Đảm bảo nằm trên cùng */
+}
+
+.menu-icon i {
+    color: #333; /* Màu sắc menu */
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Màu đen trong suốt */
+    z-index: 1000; /* Che toàn màn hình */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+/* Nội dung trong overlay */
+.overlay-content {
+    text-align: center;
+}
+
+.overlay-content a {
+    display: block;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+.overlay-content a:hover {
+    color: #ffcc00;
+}
+
+/* Nút đóng menu */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cột */
+    gap: 15px; /* Khoảng cách giữa ảnh */
+    width: 90%;
+    height: 700px; /* Chiều cao tổng thể */
+    margin: auto;
+    margin-top: 90px; 
+    overflow: hidden; /* Tránh tràn nội dung */
+}
+
+
+/* Ảnh trên chạm mép trên */
+.tren1 { height: 400px; align-self: start; }  
+.tren2 { height: 350px; align-self: start; }  
+.tren3 { height: 380px; align-self: start; }  
+
+/* Ảnh dưới chạm mép dưới */
+.duoi1 { height: 250px;}  
+.duoi2 { height: 300px; align-self: end; }  
+.duoi3 { height: 270px;}  
+
+.grid-item {
+    display: flex;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    object-position: top; /* Cắt phần trên của ảnh */
+}
+/* Định dạng chung cho grid-item */
+.grid-item {
+    position: relative; /* Để chứa overlay */
+    display: flex;
+}
+
+/* Lớp trong suốt trên từng ảnh */
+.grid-overlay {
+    position: absolute;
+    width: 90%;  /* Chiếm 90% chiều rộng của ảnh */
+    height: 90%; /* Chiếm 90% chiều cao của ảnh */
+    background: #ffffff80;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Ẩn overlay mặc định */
+    transition: opacity 0.3s ease;
+    border-radius: 10px; /* Bo góc mềm mại */
+}
+
+/* Căn overlay vào giữa ảnh */
+.grid-item .grid-overlay {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Khi hover vào ảnh thì overlay hiển thị */
+.grid-item:hover .grid-overlay {
+    opacity: 1;
+}
+
+/* Icon trên overlay */
+.grid-overlay i {
+    font-size: 40px;
+    color: white;
+}
+
+
+.quay-lai-btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: rgb(230, 204, 231);
+    border: none;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 20px; /* Cách đáy 20px */
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    text-decoration: none; 
+    transition: background-color 0.3s ease;
+}
+.quay-lai-btn:hover {
+    background-color:#9c759f ;
+}
+

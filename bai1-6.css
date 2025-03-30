@@ -1,5 +1,99 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 20px;
+}
+
+.album-container {
+    background-color: #000;
+    color: white;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.album-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.album {
+    text-align: center;
+    width: 18%;
+}
+
+.album-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.album p {
+    margin: 5px 0;
+}
+
+.album p:last-child {
+    color: #999; /* Màu xám nhạt hơn */
+    font-size: 14px;
+}
+
+.album img {
+    width: 100%;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.overlay span {
+    font-size: 24px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.overlay span:hover {
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+}
+
+.album-wrapper:hover .overlay {
+    opacity: 1;
+}
+
+.album-wrapper:hover img {
+    filter: brightness(0.5);
+}
+.quay-lai-btn {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: rgb(230, 204, 231);
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 20px; /* Cách đáy 20px */
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    text-decoration: none; 
+    transition: background-color 0.3s ease;
+}
+.quay-lai-btn:hover {
+    background-color:#9c759f ;
 }
