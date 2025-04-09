@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Max Min Finder</title>
+    <link rel="stylesheet" href="bai2-7.css">
+</head>
+<body>
+
+    <h2>Tìm số lớn nhất và nhỏ nhất trong dãy số</h2>
+
+    <button onclick="findMaxMin()">Nhập dãy số</button>
+    <p id="result"></p>
+
+    <script>
+        function findMaxMin() {
+            let input = prompt("Nhập vào một dãy số, cách nhau bằng dấu phẩy (ví dụ: 5,2,9,1,8):");
+
+            if (input) {
+                // Tách chuỗi thành mảng số
+                let numbers = input.split(",").map(Number);
+
+                // Kiểm tra hợp lệ
+                if (numbers.some(isNaN)) {
+                    document.getElementById("result").innerText = "Dãy số không hợp lệ. Vui lòng chỉ nhập số.";
+                    return;
+                }
+
+                let max = Math.max(...numbers);
+                let min = Math.min(...numbers);
+
+                document.getElementById("result").innerText =
+                    `Số lớn nhất: ${max} | Số nhỏ nhất: ${min}`;
+            }
+        }
+    </script>
+<a href="buoi7.html" class="quay-lai-btn">Quay lại</a>
+</body>
+</html>

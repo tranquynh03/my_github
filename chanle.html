@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kiểm tra số chẵn lẻ</title>
+    <link rel="stylesheet" href="chanle.css">
+</head>
+<body>
+    <script>
+        function kiemTraChanLe(so) {
+            if (so % 2 === 0) {
+                document.write(`${so} là số chẵn`);
+            } else {
+                document.write(`${so} là số lẻ`);
+            }
+        }
+
+        let nhapSo = parseInt(prompt("Nhập một số bất kỳ:"));
+        kiemTraChanLe(nhapSo);
+    </script>
+    <a href="buoi7.html" class="quay-lai-btn">Quay lại</a>
+</body>
+</html>
