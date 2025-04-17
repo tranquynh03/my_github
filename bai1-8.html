@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Form Đăng Ký</title>
+  <link rel="stylesheet" href="bai3-7.css">
+  <script>
+    function validateForm() {
+      const ho = document.getElementById("ho").value.trim();
+      const ten = document.getElementById("ten").value.trim();
+      const sdt = document.getElementById("sdt").value.trim();
+
+      if (!ho || !ten || !sdt) {
+        alert("Vui lòng nhập đầy đủ họ, tên và số điện thoại.");
+        return false;
+      }
+
+      if (!/^\d{10}$/.test(sdt)) {
+        alert("Số điện thoại phải là 10 chữ số.");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <form onsubmit="return validateForm()">
+    <fieldset>
+      <legend><b>FORM ĐĂNG KÝ</b></legend>
+      Họ: <input type="text" id="ho"><br>
+      Tên: <input type="text" id="ten"><br>
+      Ngày sinh:
+      Ngày <input type="number" value="1" min="1" max="31">
+      Tháng <input type="number" value="1" min="1" max="12">
+      Năm <input type="number" value="1980"><br>
+      Giới tính:
+      <input type="radio" name="gender" value="nam"> Nam
+      <input type="radio" name="gender" value="nu"> Nữ<br>
+      Số điện thoại: <input type="text" id="sdt"><br>
+      Sở thích:
+      <input type="checkbox" value="docsach"> Đọc sách
+      <input type="checkbox" value="xemphim"> Xem phim
+      <input type="checkbox" value="nghenhac"> Nghe nhạc
+      <input type="checkbox" value="dabong"> Đá bóng<br>
+      Khác: <input type="text"><br>
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </fieldset>
+  </form>
+  <a href="buoi8.html" class="quay-lai-btn">Quay lại</a>
+</body>
+</html>

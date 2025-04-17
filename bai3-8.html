@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Bài 6 - JavaScript</title>
+  <link rel="stylesheet" href="bai3-7.css">
+  <style>
+    #box {
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    .ketqua span {
+      margin-right: 15px;
+      font-weight: bold;
+    }
+
+    .highlight {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <!-- Bài 6.1 -->
+  <h2>6.1: Đổi màu tôi đi</h2>
+  <div id="box">
+    Đổi màu tôi đi
+    <button onclick="doiMau()">xanh</button>
+  </div>
+
+  <!-- Bài 6.2 -->
+  <h2>6.2: Thực hiện phép tính và đổi màu phép tính vừa thực hiện</h2>
+
+  <div>
+    phép cộng
+    <input id="a1"> + <input id="b1">
+    <button onclick="tinh('cong')">=</button>
+    <span id="kq1"></span>
+  </div>
+
+  <div>
+    phép trừ
+    <input id="a2"> - <input id="b2">
+    <button onclick="tinh('tru')">=</button>
+    <span id="kq2"></span>
+  </div>
+
+  <div>
+    phép nhân
+    <input id="a3"> * <input id="b3">
+    <button onclick="tinh('nhan')">=</button>
+    <span id="kq3"></span>
+  </div>
+
+  <div>
+    phép chia
+    <input id="a4"> / <input id="b4">
+    <button onclick="tinh('chia')">=</button>
+    <span id="kq4"></span>
+  </div>
+
+  <h3>Các phép toán vừa thực hiện</h3>
+  <div class="ketqua" id="output">
+    <span id="out1"></span>
+    <span id="out2"></span>
+    <span id="out3"></span>
+    <span id="out4"></span>
+  </div>
+
+  <script>
+    // Bài 6.1: đổi màu nền
+    function doiMau() {
+      document.getElementById("box").style.backgroundColor = "lightblue";
+    }
+
+    // Bài 6.2: thực hiện phép toán và đổi màu phép vừa thực hiện
+    function tinh(phep) {
+      // Reset màu cũ
+      for (let i = 1; i <= 4; i++) {
+        document.getElementById("out" + i).classList.remove("highlight");
+      }
+
+      let a, b, kq, outSpan;
+      switch(phep) {
+        case "cong":
+          a = +document.getElementById("a1").value;
+          b = +document.getElementById("b1").value;
+          kq = a + b;
+          document.getElementById("kq1").innerText = kq;
+          outSpan = document.getElementById("out1");
+          outSpan.innerText = `PHÉP CỘNG ${a}+${b}=${kq}`;
+          break;
+        case "tru":
+          a = +document.getElementById("a2").value;
+          b = +document.getElementById("b2").value;
+          kq = a - b;
+          document.getElementById("kq2").innerText = kq;
+          outSpan = document.getElementById("out2");
+          outSpan.innerText = `PHÉP TRỪ ${a}-${b}=${kq}`;
+          break;
+        case "nhan":
+          a = +document.getElementById("a3").value;
+          b = +document.getElementById("b3").value;
+          kq = a * b;
+          document.getElementById("kq3").innerText = kq;
+          outSpan = document.getElementById("out3");
+          outSpan.innerText = `PHÉP NHÂN ${a}*${b}=${kq}`;
+          break;
+        case "chia":
+          a = +document.getElementById("a4").value;
+          b = +document.getElementById("b4").value;
+          kq = b !== 0 ? (a / b).toFixed(2) : "Lỗi chia 0";
+          document.getElementById("kq4").innerText = kq;
+          outSpan = document.getElementById("out4");
+          outSpan.innerText = `PHÉP CHIA ${a}/${b}=${kq}`;
+          break;
+      }
+
+      // Đổi màu phép toán vừa thực hiện
+      outSpan.classList.add("highlight");
+    }
+  </script>
+  <a href="buoi8.html" class="quay-lai-btn">Quay lại</a>
+</body>
+</html>

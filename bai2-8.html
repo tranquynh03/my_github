@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="bai3-7.css">
+  <style>
+    #slideshow {
+      width: 500px;
+      height: 300px;
+      position: relative;
+      margin: 50px auto;
+      border: 2px solid #ccc;
+    }
+
+    #slideshow img {
+      width: 100%;
+      height: 100%;
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    #slideshow img.active {
+      display: block;
+    }
+
+    .btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 18px;
+      cursor: pointer;
+      z-index: 10;
+      border-radius: 5px;
+    }
+
+    #prev { left: 10px; }
+    #next { right: 10px; }
+
+    .btn:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  </style>
+</head>
+<body>
+
+<div id="slideshow">
+  <button class="btn" id="prev">&#10094;</button>
+  <button class="btn" id="next">&#10095;</button>
+  <img src="https://khoinguonsangtao.vn/wp-content/uploads/2022/08/anh-thien-nhien.jpg" class="active">
+  <img src="https://scr.vn/wp-content/uploads/2020/07/H%C3%ACnh-%E1%BA%A3nh-phong-c%E1%BA%A3nh-y%C3%AAn-b%C3%ACnh.jpg">
+  <img src="https://i.pinimg.com/originals/eb/d5/60/ebd560e227514f9ef0245c9b2bdb3425.jpg">
+</div>
+
+<script>
+  const images = document.querySelectorAll('#slideshow img');
+  let index = 0;
+
+  function showImage(i) {
+    images.forEach(img => img.classList.remove('active'));
+    images[i].classList.add('active');
+  }
+
+  document.getElementById("next").onclick = () => {
+    index = (index + 1) % images.length;
+    showImage(index);
+  }
+
+  document.getElementById("prev").onclick = () => {
+    index = (index - 1 + images.length) % images.length;
+    showImage(index);
+  }
+</script>
+<a href="buoi8.html" class="quay-lai-btn">Quay lại</a>
+</body>
+</html>
