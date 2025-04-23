@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="bai3-7.css">
+    </head>
+<body>
+  <div id="container">
+    <p id="p1">the first paragraph</p>
+    <p id="p2">the second paragraph</p>
+    <button onclick="changenode()">change node</button>
+  </div>
+
+  <script>
+    function changenode() {
+      var node = document.createElement('div');
+      node.innerText = "The new one";
+      var x = document.getElementById("container");
+      var y = document.getElementById("p2");
+      x.replaceChild(node, y);
+    }
+  </script>
+  <a href="bai1-9.html" class="quay-lai-btn">Quay lại</a>
+</body>
+</html>

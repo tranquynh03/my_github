@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="bai3-7.css">
+    </head>
+<body>
+  <div id="container">
+    <p id="p1">the first paragraph</p>
+    <p id="p2">the second paragraph</p>
+  </div>
+
+  <button onclick="addnode()">add node</button>
+
+  <script>
+    function addnode() {
+      var x = document.createElement('p');
+      x.className = "p3";
+      x.innerText = "the new one";
+      var cha = document.getElementById("container");
+      var y = document.getElementById("p2");
+      cha.insertBefore(x, y);
+    }
+  </script>
+  <a href="bai1-9.html" class="quay-lai-btn">Quay lại</a>
+</body>
+</html>
