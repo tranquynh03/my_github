@@ -6,7 +6,15 @@
     <title>Trang cá nhân - Trần Hà Như Quỳnh</title>
     <link rel="stylesheet" href="trangcanhan.css">
 </head>
+<script>
+    function toggleSidebar() {
+        document.querySelector('.sidebar').classList.toggle('active');
+    }
+</script>
+
 <body>
+    <button class="menu-toggle" onclick="toggleSidebar()">☰ Menu</button>
+
     <div class="container">
        
         <nav class="sidebar">
